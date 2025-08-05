@@ -27,7 +27,6 @@
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;
-      background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
     }
 
     iframe#bgFrame {
@@ -231,19 +230,6 @@
       transition: left 0.5s ease;
     }
 
-    .quick-launch-box:hover {
-      transform: translateY(-5px) scale(1.05);
-      background: rgba(75, 249, 237, 0.1);
-      border-color: rgba(75, 249, 237, 0.6);
-      box-shadow: 
-        0 10px 30px rgba(75, 249, 237, 0.2),
-        0 0 20px rgba(75, 249, 237, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-
-    .quick-launch-box:hover::before {
-      left: 100%;
-    }
 
     .quick-launch-box:active {
       transform: translateY(-3px) scale(1.02);
@@ -280,12 +266,11 @@
       margin-bottom: 8px;
     }
 
-    @keyframes spin {
+       @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
 
-    /* Scrollbar styling */
     * {
       scrollbar-width: thin;
       scrollbar-color: #00ffe5 transparent;
@@ -306,123 +291,23 @@
       border: 2px solid transparent; 
     }
 
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .quick-launch-container {
-        gap: 12px;
-        padding: 0 15px;
-      }
-      
-      .quick-launch-box {
-        width: 120px;
-        height: 120px;
-        padding: 15px;
-      }
-      
-      .quick-launch-box .icon {
-        font-size: 2rem;
-      }
-      
-      .quick-launch-box .text {
-        font-size: 0.8rem;
-      }
-      
-      .search-dropdown {
-        width: 280px;
-      }
-    }
 
-    @media (max-width: 480px) {
-      .quick-launch-box {
-        width: 100px;
-        height: 100px;
-        padding: 12px;
-      }
-      
-      .quick-launch-box .icon {
-        font-size: 1.8rem;
-      }
-      
-      .quick-launch-box .text {
-        font-size: 0.75rem;
-      }
-    }
-
-    /* Special platform colors */
-    .quick-launch-box[data-platform="youtube"] {
-      border-color: rgba(255, 0, 0, 0.3);
-    }
-    .quick-launch-box[data-platform="youtube"]:hover {
-      background: rgba(255, 0, 0, 0.1);
-      border-color: rgba(255, 0, 0, 0.6);
-      box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
-    }
-    .quick-launch-box[data-platform="youtube"] .icon {
-      color: #ff4444;
-    }
-
-    .quick-launch-box[data-platform="discord"] {
-      border-color: rgba(88, 101, 242, 0.3);
-    }
-    .quick-launch-box[data-platform="discord"]:hover {
-      background: rgba(88, 101, 242, 0.1);
-      border-color: rgba(88, 101, 242, 0.6);
-      box-shadow: 0 10px 30px rgba(88, 101, 242, 0.2);
-    }
-    .quick-launch-box[data-platform="discord"] .icon {
-      color: #5865f2;
-    }
-
-    .quick-launch-box[data-platform="instagram"] {
-      border-color: rgba(225, 48, 108, 0.3);
-    }
-    .quick-launch-box[data-platform="instagram"]:hover {
-      background: rgba(225, 48, 108, 0.1);
-      border-color: rgba(225, 48, 108, 0.6);
-      box-shadow: 0 10px 30px rgba(225, 48, 108, 0.2);
-    }
-    .quick-launch-box[data-platform="instagram"] .icon {
-      color: #e1306c;
-    }
-
-    .quick-launch-box[data-platform="netflix"] {
-      border-color: rgba(229, 9, 20, 0.3);
-    }
-    .quick-launch-box[data-platform="netflix"]:hover {
-      background: rgba(229, 9, 20, 0.1);
-      border-color: rgba(229, 9, 20, 0.6);
-      box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
-    }
-    .quick-launch-box[data-platform="netflix"] .icon {
-      color: #e50914;
-    }
+    h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 3em auto;
+  text-align: center;
+}
   </style>
 </head>
 
 <body>
   <iframe src="bg.html" id="bgFrame"></iframe>
 
-  <div title="Ultraviolet Logo" class="flex-center logo-wrapper header-center">
-    <h1>Search</h1>
-    <span style="color: white;">
-      <strong style="color: #4bf9ed;">C</strong>rafted 
-      <strong style="color: #4bf9ed;">G</strong>amz 
-      <strong style="color: #4bf9ed;">P</strong>rivate 
-      <strong style="color: #4bf9ed;">U</strong>nblocked 
-      <strong style="color: #4bf9ed;">P</strong>roxy
-    </span>
-  </div>
+  <h1>Apps</h1>
 
-  <form id="uv-form" class="flex-center">
-    <input
-      id="uv-search-engine"
-      value="https://www.google.com/search?q=%s"
-      type="hidden"
-    />
-    <input id="uv-address" type="text" placeholder="Search the web freely with CGPUP, powered by Ultraviolet" />
-  </form>
-
-  <div class="quick-launch-title">Quick Launch</div>
   <div class="quick-launch-counter" id="quickLaunchCounter"></div>
 
   <div class="search-dropdown">
